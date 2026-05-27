@@ -1,0 +1,41 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/your_database?serverTimezone=UTC
+    username: your_username
+    password: your_password
+# mybatis-plus
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+# springdoc-openapi
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      packages-to-scan: com.example.bishe_demo
+
+# knife4j
+knife4j:
+  enable: true
+  production: false
+  basic:
+    enable: false
+    username: knife4j
+    password: knife4j
+  setting:
+    language: zh_cn
+    enable-version: true
+    enable-swagger-models: true
