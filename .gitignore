@@ -41,6 +41,12 @@ frontend/dist/
 .env
 .env.*
 
+### Unnecessary project files ###
+.gitattributes
+mvnw.cmd
+package.json
+package-lock.json
+
 ### Config ###
 src/main/resources/application.yml
 application-local.yml
